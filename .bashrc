@@ -59,3 +59,9 @@ eval `opam config env`
 if [ -f ~/.bash_loader ]; then
 	source ~/.bash_loader
 fi
+
+export PETABLOX="/home/khheo/project/petablox"
+export PETABLOX_BENCH="/home/khheo/project/petablox-bench"
+export CHORD_MAIN="/home/khheo/project/jchord/main"
+export PJBENCH="/home/khheo/project/pjbench"
+export PAG_BENCH="/home/khheo/project/pjbench"
