@@ -141,3 +141,4 @@ eval `opam config env`
 if [ -f ~/.bash_loader ]; then
 	source ~/.bash_loader
 fi
+. "$HOME/.cargo/env"

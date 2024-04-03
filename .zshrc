@@ -60,17 +60,12 @@ DISABLE_AUTO_TITLE="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:/opt/homebrew/bin:$PATH"
-eval "$(pyenv init -)"
-
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git macos docker zsh-syntax-highlighting zsh-autosuggestions pyenv)
+plugins=(git macos docker zsh-syntax-highlighting zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 unsetopt share_history
@@ -107,9 +102,14 @@ if [ `uname` = 'Linux' ]; then
   export PYTHONPATH="$HOME/.local/lib/python3.8/site-packages"
 else
   export LSCOLORS='ExFxCxDxBxegedabagaced'
-  export PATH="$HOME/.rbenv/shims:$HOME/usr/bin/:/usr/local/opt/llvm/bin:/opt/homebrew/bin:$PATH"
+  export PATH="$HOME/.cargo/bin:$HOME/.rbenv/shims:$HOME/usr/bin/:/usr/local/opt/llvm/bin:/opt/homebrew/bin:$PATH"
   eval "$(rbenv init -)"
 fi
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:/opt/homebrew/bin:$PATH"
+eval "$(pyenv init -)"
 
 alias vi='nvim'
 alias sr='screen -D -r main'
@@ -118,6 +118,8 @@ alias python='python3'
 alias eoe='eval $(opam env)'
 
 eval `opam config env`
+
+. "$HOME/.cargo/env"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

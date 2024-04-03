@@ -27,3 +27,4 @@ fi
 
 # OPAM configuration
 . /home/khheo/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+. "$HOME/.cargo/env"
