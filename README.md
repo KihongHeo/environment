@@ -23,6 +23,8 @@ cd environment
 - Shell: https://github.com/mvdan/sh
 - C/C++: https://clang.llvm.org/docs/ClangFormat.html
 - JS/JSON: https://github.com/beautify-web/js-beautify
+- Latex: https://github.com/cmhughes/latexindent.pl
+
 4. Coc setup
 - node >= 17 ([nvm](https://github.com/nvm-sh/nvm) 이용)
 - Launch vim and run `:CocInstall coc-json coc-pyright coc-clangd`
