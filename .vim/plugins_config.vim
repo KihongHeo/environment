@@ -49,9 +49,15 @@ let g:neoformat_ocaml_ocamlformat = {
 
 let g:neoformat_enabled_ocaml = ['ocamlformat']
 
+let g:neoformat_tex_latexindent = {
+  \ 'exe': 'latexindent',
+  \ 'args': ['-l'],
+  \ 'stdin': 1
+  \ }
+
 augroup fmt
   autocmd!
-  autocmd BufWritePre *.ml,*.mli,*.sh,*.py,*.json,dune,*.c try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry
+  autocmd BufWritePre *.ml,*.mli,*.sh,*.py,*.json,dune,*.c,*.tex try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry
 augroup END
 
 
