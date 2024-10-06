@@ -119,7 +119,7 @@ alias eoe='eval $(opam env)'
 
 eval `opam config env`
 
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
