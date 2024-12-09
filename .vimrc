@@ -62,6 +62,7 @@ set tm=500
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 colorscheme vim
+set notermguicolors
 
 " Enable syntax highlighting
 syntax enable
