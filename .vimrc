@@ -61,6 +61,8 @@ set tm=500
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+colorscheme vim
+
 " Enable syntax highlighting
 syntax enable
 
