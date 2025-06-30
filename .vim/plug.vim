@@ -16,4 +16,7 @@ Plug 'souffle-lang/souffle.vim'
 Plug 'dense-analysis/ale'
 Plug 'github/copilot.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'Julian/lean.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/plenary.nvim'
 call plug#end()

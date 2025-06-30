@@ -6,5 +6,7 @@
       "filetypes": ["ocaml", "reason"]
     }
   },
-  "coc.preferences.currentFunctionSymbolAutoUpdate": true
+  "coc.preferences.currentFunctionSymbolAutoUpdate": true,
+  "pyright.enable": false,
+  "inlayHint.enable": false
 }

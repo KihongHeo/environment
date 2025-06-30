@@ -82,6 +82,12 @@ endif
 autocmd BufWritePre *.h,*.cc,*.cpp,*.c call Formatonsave()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => python
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:neoformat_enabled_python = ['yapf']
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Coc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Applying codeAction to the selected region.
@@ -127,6 +133,7 @@ highlight ALEWarningSign ctermbg      =NONE ctermfg=yellow
 
 let g:ale_linters = {
 \   'ocaml':      ['merlin'],
+\   'python':     []
 \}
 
 let g:ale_fixers = {
