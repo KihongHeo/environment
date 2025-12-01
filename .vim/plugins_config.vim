@@ -72,11 +72,11 @@ if has('mac')
     py3f /opt/homebrew/Celler/llvm/12.0.1/share/clang/clang-format.py
   endfunction
 else
-  map <C-K> :py3f /usr/share/clang/clang-format-13/clang-format.py<cr>
-  imap <C-K> <c-o>:py3f /usr/share/clang/clang-format-13/clang-format.py<cr>
+  map <C-K> :py3f /usr/share/clang/clang-format-15/clang-format.py<cr>
+  imap <C-K> <c-o>:py3f /usr/share/clang/clang-format-15/clang-format.py<cr>
   function! Formatonsave()
     let l:formatdiff = 1
-    py3f /usr/share/clang/clang-format-13/clang-format.py
+    py3f /usr/share/clang/clang-format-15/clang-format.py
   endfunction
 endif
 autocmd BufWritePre *.h,*.cc,*.cpp,*.c call Formatonsave()
@@ -149,3 +149,13 @@ let g:ale_fixers = {
 let g:AutoPairsShortcutToggle = '<C-p>'
 
 let g:shfmt_opt = "-ci -i 2"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Avante
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd! User avante.nvim
+lua << EOF
+require('avante').setup({
+  provider = "openai-gpt-4o-mini"
+})
+EOF
