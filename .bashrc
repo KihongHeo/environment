@@ -142,3 +142,5 @@ if [ -f ~/.bash_loader ]; then
 	source ~/.bash_loader
 fi
 . "$HOME/.cargo/env"
+opam switch prosyslab-classroom-5.2.0
+eval $(opam env)

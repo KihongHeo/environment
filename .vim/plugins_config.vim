@@ -159,4 +159,9 @@ lua << EOF
 require('avante').setup({
   provider = "openai-gpt-4o-mini"
 })
+require("snacks").setup()
 EOF
+
+" Etc
+" https://groups.google.com/g/vim_dev/c/3r7cl8Ys19Q
+let g:java_ignore_markdown = 1

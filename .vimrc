@@ -61,13 +61,14 @@ set tm=500
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme vim
-set notermguicolors
+set termguicolors
 
 " Enable syntax highlighting
 syntax enable
 
+colorscheme gruvbox
 set background=dark
+hi Normal guibg=NONE ctermbg=NONE
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -252,6 +253,14 @@ function! VisualSelection(direction, extra_filter) range
     let @/ = l:pattern
     let @" = l:saved_reg
 endfunction
+
+""""""""
+" After NeoVim 0.11, color is inverted for unknown reason. Here is a
+" workaround. (https://github.com/itchyny/lightline.vim/issues/695)
+""""""""
+highlight! link StatusLine Normal
+highlight! link StatusLineNC Normal
+
 
 " ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
 let s:opam_share_dir = system("opam var share")
