@@ -66,11 +66,19 @@ set termguicolors
 " Enable syntax highlighting
 syntax enable
 
-colorscheme gruvbox
+colorscheme vim
 set background=dark
 hi Normal guibg=NONE ctermbg=NONE
+hi Comment ctermfg=110 guifg=#87d7ff
+hi Statement ctermfg=220 guifg=#fce94f gui=NONE
+hi Keyword ctermfg=220 guifg=#f3eb7a
+hi LineNr ctermfg=220 guifg=#f3eb7a
+hi PreProc ctermfg=LightBlue guifg=#729fcf
+hi DiffText guibg=#e15140 gui=bold ctermbg=Red cterm=bold
+hi DiffChange ctermbg=DarkMagenta guibg=#7f698b
+hi Pmenu guibg=#282828 ctermbg=LightMagenta
+hi Type guifg=#60ff60 gui=NONE
 
-" Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
 " Use Unix as the standard file type

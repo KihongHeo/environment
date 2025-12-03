@@ -133,7 +133,7 @@ highlight ALEWarningSign ctermbg      =NONE ctermfg=yellow
 
 let g:ale_linters = {
 \   'ocaml':      ['merlin'],
-\   'python':     []
+\   'python':     [],
 \   'tex':        ['chktex'],
 \}
 
