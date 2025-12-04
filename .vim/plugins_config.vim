@@ -38,7 +38,7 @@ let g:vimshell_force_overwrite_statusline = 0
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => ocamlformat
+" => neoformat
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:neoformat_ocaml_ocamlformat = {
             \ 'exe': 'ocamlformat',
@@ -54,6 +54,8 @@ let g:neoformat_tex_latexindent = {
   \ 'args': ['-l'],
   \ 'stdin': 1
   \ }
+
+let g:neoformat_enabled_python = ['yapf']
 
 augroup fmt
   autocmd!
@@ -80,12 +82,6 @@ else
   endfunction
 endif
 autocmd BufWritePre *.h,*.cc,*.cpp,*.c call Formatonsave()
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => python
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-let g:neoformat_enabled_python = ['yapf']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Coc
