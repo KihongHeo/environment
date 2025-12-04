@@ -70,7 +70,7 @@ colorscheme vim
 set background=dark
 hi Normal guibg=NONE ctermbg=NONE
 hi Comment ctermfg=110 guifg=#87d7ff
-hi Statement ctermfg=220 guifg=#fce94f gui=NONE
+hi Statement ctermfg=220 guifg=#f3eb7a gui=NONE
 hi Keyword ctermfg=220 guifg=#f3eb7a
 hi LineNr ctermfg=220 guifg=#f3eb7a
 hi PreProc ctermfg=LightBlue guifg=#729fcf
