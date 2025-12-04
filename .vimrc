@@ -68,16 +68,30 @@ syntax enable
 
 colorscheme vim
 set background=dark
+
+" :echo synIDattr(synIDtrans(synID(line("."), col("."), 1)), "name")
+" cterm Yellow -> guifg #f3eb7a
+" cterm Blue -> guifg #3464a4
+" cterm LightBlue -> guifg #729fcf
+" cterm DarkGrey -> guibg #282828
+" cterm LightMagenta -> guifg #ffcfff
+" cterm DarkMagenta -> guibg #7f698b
+" cterm Red -> guibg #e15140
+" cterm Cyan -> guifg #87d7ff
 hi Normal guibg=NONE ctermbg=NONE
-hi Comment ctermfg=110 guifg=#87d7ff
+hi Comment ctermfg=Cyan guifg=#87d7ff
 hi Statement ctermfg=220 guifg=#f3eb7a gui=NONE
 hi Keyword ctermfg=220 guifg=#f3eb7a
 hi LineNr ctermfg=220 guifg=#f3eb7a
 hi PreProc ctermfg=LightBlue guifg=#729fcf
-hi DiffText guibg=#e15140 gui=bold ctermbg=Red cterm=bold
+hi DiffAdd ctermbg=Blue guibg=#3464a4
+hi DiffText ctermbg=Red cterm=bold guibg=#e15140 gui=bold
 hi DiffChange ctermbg=DarkMagenta guibg=#7f698b
-hi Pmenu guibg=#282828 ctermbg=LightMagenta
+hi Pmenu ctermbg=DarkGrey guibg=#282828
 hi Type guifg=#60ff60 gui=NONE
+hi NonText ctermfg=Blue guifg=#3464a4
+hi Title ctermfg=LightMagenta guifg=#ffcfff
+hi Identifier ctermfg=Cyan cterm=bold guifg=#87d7ff gui=bold
 
 set encoding=utf8
 
