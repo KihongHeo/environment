@@ -78,6 +78,7 @@ set background=dark
 " cterm Magenta -> guifg #ffa0a0
 " cterm DarkMagenta -> guibg #7f698b
 " cterm Red -> guibg #e15140
+" cterm DarkRed -> guibg #b0451c
 " cterm Cyan -> guifg #87d7ff
 " cterm LightGreen -> guifg #43ff9d
 hi Normal guibg=NONE ctermbg=NONE
@@ -98,7 +99,8 @@ hi Function ctermfg=Cyan cterm=bold guifg=#87d7ff gui=bold
 hi Search ctermbg=Yellow guibg=#f3eb7a gui=NONE
 hi Todo ctermfg=Black ctermbg=Yellow guifg=#3464a4 guibg=#f3eb7a
 hi Error ctermfg=White ctermbg=Red guifg=White guibg=#e15140
-
+hi ErrorMsg ctermfg=White ctermbg=DarkRed guifg=White guibg=#b0451c
+hi Question ctermfg=LightGreen guifg=#43ff9d gui=NONE
 set encoding=utf8
 
 " Use Unix as the standard file type
