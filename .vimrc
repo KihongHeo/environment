@@ -93,9 +93,11 @@ hi Pmenu ctermbg=DarkGrey guibg=#282828
 hi Type guifg=#43ff9d gui=NONE
 hi NonText ctermfg=Blue guifg=#3464a4
 hi Title ctermfg=LightMagenta guifg=#ffcfff
-"hi Identifier ctermfg=Cyan cterm=bold guifg=#87d7ff gui=bold
 hi Identifier ctermfg=White cterm=NONE guifg=White gui=NONE
 hi Function ctermfg=Cyan cterm=bold guifg=#87d7ff gui=bold
+hi Search ctermbg=Yellow guibg=#f3eb7a gui=NONE
+hi Todo ctermfg=Black ctermbg=Yellow guifg=#3464a4 guibg=#f3eb7a
+hi Error ctermfg=White ctermbg=Red guifg=White guibg=#e15140
 
 set encoding=utf8
 
