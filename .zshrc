@@ -85,14 +85,14 @@ export C_INCLUDE_PATH=$HOME/.local/include
 export CPLUS_INCLUDE_PATH=$HOME/.local/include
 export LD_LIBRARY_PATH="$HOME/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/clang/lib/:$LD_LIBRARY_PATH"
 
-if [ `uname` = 'Linux' ]; then
+if [ $(uname) = 'Linux' ]; then
   # enable color support of ls and also add handy aliases
   if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
   fi
 
-#  export LD_LIBRARY_PATH=".:$HOME/.local/bin:$HOME/usr/lib:/usr/local/lib:/usr/lib:/usr/local/lib64:/usr/lib64:/home/khheo/.linuxbrew/lib:/usr/lib/x86_64-linux-gnu/"
+  #  export LD_LIBRARY_PATH=".:$HOME/.local/bin:$HOME/usr/lib:/usr/local/lib:/usr/lib:/usr/local/lib64:/usr/lib64:/home/khheo/.linuxbrew/lib:/usr/lib/x86_64-linux-gnu/"
   export LD_LIBRARY_PATH=".:$HOME/.local/bin:$HOME/usr/lib:/usr/local/lib:/usr/lib:/usr/local/lib64:/usr/lib64:/home/khheo/.linuxbrew/lib"
   export CLASSPATH='.:/usr/lib/jvm/java-6-sun/lib/:/home/khheo/javalib/jdom/build/jdom.jar'
   export OCAMLRUNPARAM='b' #'b, s=2G, l=1G, i=50M, o=80'
@@ -117,7 +117,7 @@ alias ta='tmux attach -t main'
 alias python='python3'
 alias eoe='eval $(opam env)'
 
-eval `opam config env`
+eval $(opam config env)
 
 # . "$HOME/.cargo/env"
 
@@ -143,26 +143,24 @@ eval `opam config env`
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/kihong/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/kihong/anaconda3/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
 if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
+  eval "$__conda_setup"
 else
-    if [ -f "/home/kihong/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/kihong/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/kihong/anaconda3/bin:$PATH"
-    fi
+  if [ -f "/home/kihong/anaconda3/etc/profile.d/conda.sh" ]; then
+    . "/home/kihong/anaconda3/etc/profile.d/conda.sh"
+  else
+    export PATH="/home/kihong/anaconda3/bin:$PATH"
+  fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-nvm use 24 > /dev/null
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+nvm use 24 >/dev/null
 
 source .env
