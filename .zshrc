@@ -163,4 +163,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 nvm use 24 >/dev/null
 
-source .env
+if [ -f .env ]; then
+  source .env
+fi
