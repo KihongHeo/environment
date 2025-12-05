@@ -101,6 +101,7 @@ hi Todo ctermfg=Black ctermbg=Yellow guifg=#3464a4 guibg=#f3eb7a
 hi Error ctermfg=White ctermbg=Red guifg=White guibg=#e15140
 hi ErrorMsg ctermfg=White ctermbg=DarkRed guifg=White guibg=#b0451c
 hi Question ctermfg=LightGreen guifg=#43ff9d gui=NONE
+hi DiagnosticError ctermfg=DarkRed guifg=#b0451c
 set encoding=utf8
 
 " Use Unix as the standard file type
