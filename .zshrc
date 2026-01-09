@@ -100,11 +100,6 @@ if [ $(uname) = 'Linux' ]; then
   export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
   export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
   export PYTHONPATH="$HOME/.local/lib/python3.8/site-packages"
-
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
-  nvm use 24 >/dev/null
 else
   export LSCOLORS='ExFxCxDxBxegedabagaced'
   export PATH="$HOME/.elan/bin:$HOME/.cargo/bin:$HOME/.rbenv/shims:$HOME/usr/bin/:/usr/local/opt/llvm/bin:/opt/homebrew/bin:$PATH"

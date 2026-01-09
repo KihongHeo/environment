@@ -57,6 +57,8 @@ let g:neoformat_tex_latexindent = {
 
 let g:neoformat_enabled_python = ['yapf']
 
+let g:neoformat_enabled_cs = ['csharpier']
+
 augroup fmt
   autocmd!
   autocmd BufWritePre *.ml,*.mli,*.sh,*.py,*.json,dune,*.c,*.tex try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry

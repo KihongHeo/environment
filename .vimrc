@@ -81,6 +81,7 @@ set background=dark
 " cterm DarkRed -> guibg #b0451c
 " cterm Cyan -> guifg #87d7ff
 " cterm LightGreen -> guifg #43ff9d
+" cterm Green -> guifg #8edf3a
 hi Normal guibg=NONE ctermbg=NONE
 hi Comment ctermfg=Cyan guifg=#87d7ff
 hi Statement ctermfg=220 guifg=#f3eb7a gui=NONE
@@ -102,6 +103,9 @@ hi Error ctermfg=White ctermbg=Red guifg=White guibg=#e15140
 hi ErrorMsg ctermfg=White ctermbg=DarkRed guifg=White guibg=#b0451c
 hi Question ctermfg=LightGreen guifg=#43ff9d gui=NONE
 hi DiagnosticError ctermfg=DarkRed guifg=#b0451c
+hi Added ctermfg=Green guifg=#8edf3a
+hi Removed ctermfg=Red guifg=#e15140
+
 set encoding=utf8
 
 " Use Unix as the standard file type
@@ -232,7 +236,7 @@ set keywordprg=man\ -a
 set scrolloff=3
 
 set shortmess=ao
-set showbreak=+++\
+set showbreak=
 set showmatch
 set showmode
 set sidescroll=8
