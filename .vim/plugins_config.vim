@@ -155,7 +155,12 @@ let g:shfmt_opt = "-ci -i 2"
 autocmd! User avante.nvim
 lua << EOF
 require('avante').setup({
-  provider = "openai-gpt-4o-mini"
+  providers = {
+    ["gpt-5-nano"] = {
+      __inherited_from = "openai",
+      model = "gpt-5-nano",
+    }
+  }
 })
 require("snacks").setup()
 EOF
