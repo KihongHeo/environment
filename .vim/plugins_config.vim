@@ -64,6 +64,7 @@ augroup fmt
   autocmd BufWritePre *.ml,*.mli,*.sh,*.py,*.json,dune,*.c,*.tex try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry
 augroup END
 
+let g:shfmt_opt = "-ci -i 2"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => clang-format
@@ -143,11 +144,9 @@ let g:ale_fixers = {
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => AutoPairs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" This is a workaround: when using nvim, Esc-p toggles Autopairs
-" conflicting with Esc and paste
-let g:AutoPairsShortcutToggle = '<C-p>'
-
-let g:shfmt_opt = "-ci -i 2"
+lua << EOF
+require("nvim-autopairs").setup {}
+EOF
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Avante
@@ -161,10 +160,38 @@ require('avante').setup({
       __inherited_from = "openai",
       model = "gpt-5-nano",
     }
+  },
+  selector = {
+    provider = "snacks",
   }
 })
 require("snacks").setup()
 EOF
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => nvim-cmp
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set completeopt=menu,menuone,noselect
+
+let g:loaded_dressing = 0
+
+lua << EOF
+local cmp = require('cmp')
+cmp.setup({
+  mapping = cmp.mapping.preset.insert({
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<CR>']      = cmp.mapping.confirm({ select = true }),
+    ['<Tab>']     = cmp.mapping.select_next_item(),
+    ['<S-Tab>']   = cmp.mapping.select_prev_item(),
+  }),
+  sources = {
+    { name = 'coc' },     -- add coc
+    { name = 'buffer' },
+    { name = 'path' },
+  },
+})
+EOF
+
 
 " Etc
 " https://groups.google.com/g/vim_dev/c/3r7cl8Ys19Q
