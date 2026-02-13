@@ -30,3 +30,7 @@ cd environment
 4. Coc setup
 - node >= 17 ([nvm](https://github.com/nvm-sh/nvm) 이용)
 - Launch vim and run `:CocInstall coc-json coc-pyright coc-clangd`
+
+5. Tree-sitter setup
+- Install tree-sitter CLI: https://github.com/tree-sitter/tree-sitter/blob/master/crates/cli/README.md
+- Launch vim and run `:TSInstall python javascript json cpp ocaml bash latex llvm` etc.
