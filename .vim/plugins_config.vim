@@ -154,11 +154,11 @@ EOF
 autocmd! User avante.nvim
 lua << EOF
 require('avante').setup({
-  provider = "gpt-5-nano",
+  provider = "gpt-5-codex",
   providers = {
-    ["gpt-5-nano"] = {
+    ["gpt-5-codex"] = {
       __inherited_from = "openai",
-      model = "gpt-5-nano",
+      model = "gpt-5-codex",
     }
   },
   selector = {
