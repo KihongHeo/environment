@@ -69,30 +69,30 @@ let g:shfmt_opt = "-ci -i 2"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => clang-format
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if has('mac')
-  map <C-K> :py3f /opt/homebrew/Cellar/llvm/12.0.1/share/clang/clang-format.py<cr>
-  imap <C-K> <c-o>:py3f /opt/homebrew/Celler/llvm/12.0.1/share/clang/clang-format.py<cr>
-  function! Formatonsave()
-    let l:formatdiff = 1
-    py3f /opt/homebrew/Celler/llvm/12.0.1/share/clang/clang-format.py
-  endfunction
-else
-  map <C-K> :py3f /usr/share/clang/clang-format-15/clang-format.py<cr>
-  imap <C-K> <c-o>:py3f /usr/share/clang/clang-format-15/clang-format.py<cr>
-  function! Formatonsave()
-    let l:formatdiff = 1
-    py3f /usr/share/clang/clang-format-15/clang-format.py
-  endfunction
-endif
-autocmd BufWritePre *.h,*.cc,*.cpp,*.c call Formatonsave()
+"if has('mac')
+"  map <C-K> :py3f /opt/homebrew/Cellar/llvm/12.0.1/share/clang/clang-format.py<cr>
+"  imap <C-K> <c-o>:py3f /opt/homebrew/Celler/llvm/12.0.1/share/clang/clang-format.py<cr>
+"  function! Formatonsave()
+"    let l:formatdiff = 1
+"    py3f /opt/homebrew/Celler/llvm/12.0.1/share/clang/clang-format.py
+"  endfunction
+"else
+"  map <C-K> :py3f /usr/share/clang/clang-format-15/clang-format.py<cr>
+"  imap <C-K> <c-o>:py3f /usr/share/clang/clang-format-15/clang-format.py<cr>
+"  function! Formatonsave()
+"    let l:formatdiff = 1
+"    py3f /usr/share/clang/clang-format-15/clang-format.py
+"  endfunction
+"endif
+"autocmd BufWritePre *.h,*.cc,*.cpp,*.c call Formatonsave()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Coc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Applying codeAction to the selected region.
-" Example: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
+" Example: `<leader>cap` for current paragraph
+xmap <leader>ca  <Plug>(coc-codeaction-selected)
+nmap <leader>ca  <Plug>(coc-codeaction-selected)
 
 " Remap keys for applying codeAction to the current buffer.
 nmap <leader>ac  <Plug>(coc-codeaction)
@@ -140,58 +140,6 @@ let g:ale_fixers = {
 \   'ocaml':      ['ocamlformat'],
 \   '*':          ['remove_trailing_lines', 'trim_whitespace'],
 \}
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => AutoPairs
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-lua << EOF
-require("nvim-autopairs").setup {}
-EOF
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Avante
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd! User avante.nvim
-lua << EOF
-require('avante').setup({
-  provider = "gpt-5-codex",
-  providers = {
-    ["gpt-5-codex"] = {
-      __inherited_from = "openai",
-      model = "gpt-5-codex",
-    }
-  },
-  selector = {
-    provider = "snacks",
-  }
-})
-require("snacks").setup()
-EOF
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => nvim-cmp
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set completeopt=menu,menuone,noselect
-
-let g:loaded_dressing = 0
-
-lua << EOF
-local cmp = require('cmp')
-cmp.setup({
-  mapping = cmp.mapping.preset.insert({
-    ['<C-Space>'] = cmp.mapping.complete(),
-    ['<CR>']      = cmp.mapping.confirm({ select = true }),
-    ['<Tab>']     = cmp.mapping.select_next_item(),
-    ['<S-Tab>']   = cmp.mapping.select_prev_item(),
-  }),
-  sources = {
-    { name = 'coc' },     -- add coc
-    { name = 'buffer' },
-    { name = 'path' },
-  },
-})
-EOF
-
 
 " Etc
 " https://groups.google.com/g/vim_dev/c/3r7cl8Ys19Q

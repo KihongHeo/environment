@@ -90,7 +90,7 @@ hi PreProc ctermfg=LightBlue guifg=#729fcf gui=bold
 hi DiffAdd ctermbg=Blue guibg=#3464a4
 hi DiffText ctermbg=Red cterm=bold guibg=#e15140 gui=bold
 hi DiffChange ctermbg=DarkMagenta guibg=#7f698b
-hi Pmenu ctermbg=DarkGrey guibg=#282828
+hi Pmenu ctermfg=White ctermbg=237 guifg=White guibg=#5a3535
 hi Type guifg=#43ff9d gui=NONE
 hi NonText ctermfg=Blue guifg=#3464a4
 hi Title ctermfg=LightMagenta guifg=#ffcfff
