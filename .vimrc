@@ -3,7 +3,6 @@ if has('python3')
   silent! python3 1
 endif
 
-source ~/.vim/plug.vim
 source ~/.vim/plugins_config.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

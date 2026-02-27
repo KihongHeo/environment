@@ -17,8 +17,8 @@ cd environment
 - [Autosuggestion](https://github.com/zsh-users/zsh-autosuggestions)
 
 ## Vim
-1. Install [vim-plug](https://github.com/junegunn/vim-plug)
-2. Launch vim and run `:PlugInstall`
+1. Launch Neovim once to let [lazy.nvim](https://github.com/folke/lazy.nvim) bootstrap automatically
+2. Run `:Lazy sync` to install/update plugins
 3. Install the following packages for [NeoFormat](https://github.com/sbdchd/neoformat):
 - Python: https://github.com/google/yapf
 - Ocaml: https://github.com/ocaml-ppx/ocamlformat
