@@ -12,6 +12,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   callback = function()
     -- OCaml namespace semantic token -> PreProc
     vim.api.nvim_set_hl(0, "@lsp.type.namespace.ocaml", { link = "PreProc" })
+    vim.api.nvim_set_hl(0, "@lsp.type.interface.ocaml", { link = "PreProc" })
     vim.api.nvim_set_hl(0, "@lsp.type.function.ocaml", { link = "Identifier" })
   end,
 })
