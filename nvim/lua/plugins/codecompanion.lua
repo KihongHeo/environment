@@ -6,6 +6,7 @@ return {
       interactions = {
         chat = {
           adapter = "opencode",
+          model = "gpt-5.4",
         },
       },
       display = {
