@@ -6,4 +6,5 @@ vim.g.maplocalleader = "\\"
 
 require("config.lazy")
 require("config.lsp")
+require("config.opencode")
 vim.cmd("source ~/.vimrc")
