@@ -5,8 +5,10 @@ return {
     opts = {
       interactions = {
         chat = {
-          adapter = "opencode",
-          model = "gpt-5.4",
+          adapter = {
+            name = "opencode",
+            model = "openai/gpt-5.4",
+          },
         },
       },
       display = {
