@@ -1,3 +1,5 @@
+local vim = _G["vim"]
+
 vim.opt.runtimepath:append(vim.fn.expand("~/.vim"))
 vim.opt.packpath:append(vim.fn.expand("~/.vim"))
 
@@ -15,5 +17,4 @@ vim.opt.fillchars = {
 
 require("config.lazy")
 require("config.lsp")
-require("config.opencode")
 vim.cmd("source ~/.vimrc")
