@@ -161,3 +161,5 @@ unset __conda_setup
 if [ -f .env ]; then
   source .env
 fi
+
+source <(fzf --zsh)
