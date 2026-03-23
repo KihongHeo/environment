@@ -4,6 +4,7 @@ return {
   { "scrooloose/nerdcommenter" },
   { "michaeljsmith/vim-indent-object" },
   { "tpope/vim-fugitive" },
+  { "mlr-msft/vim-loves-dafny" },
   { "windwp/nvim-autopairs", event = "InsertEnter", config = true },
   { "souffle-lang/souffle.vim" },
   { "dense-analysis/ale" },
