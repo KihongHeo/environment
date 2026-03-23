@@ -49,6 +49,15 @@ let g:neoformat_ocaml_ocamlformat = {
 
 let g:neoformat_enabled_ocaml = ['ocamlformat']
 
+let g:neoformat_dafny_dafny = {
+            \ 'exe': 'dafny',
+            \ 'no_append': 1,
+            \ 'stdin': 1,
+            \ 'args': ['format', "--stdin", "--print", "--allow-deprecation"],
+            \ }
+
+let g:neoformat_enabled_dafny = ['dafny']
+
 let g:neoformat_tex_latexindent = {
   \ 'exe': 'latexindent',
   \ 'args': ['-l'],
@@ -61,7 +70,7 @@ let g:neoformat_enabled_cs = ['csharpier']
 
 augroup fmt
   autocmd!
-  autocmd BufWritePre *.ml,*.mli,*.sh,*.py,*.json,dune,*.c,*.tex try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry
+  autocmd BufWritePre *.ml,*.mli,*.sh,*.py,*.json,dune,*.c,*.tex,*.dfy try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry
 augroup END
 
 let g:shfmt_opt = "-ci -i 2"
