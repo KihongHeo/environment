@@ -21,7 +21,7 @@
   "render-markdown.nvim": { "branch": "main", "commit": "e3c18ddd27a853f85a6f513a864cf4f2982b9f26" },
   "snacks.nvim": { "branch": "main", "commit": "ad9ede6a9cddf16cedbd31b8932d6dcdee9b716e" },
   "souffle.vim": { "branch": "master", "commit": "1402e6905e085bf04faf5fca36a6fddba01119d6" },
+  "vim-dafny": { "branch": "master", "commit": "be335a28d32a496fc8588714a8f0017225cc1aa9" },
   "vim-fugitive": { "branch": "master", "commit": "3b753cf8c6a4dcde6edee8827d464ba9b8c4a6f0" },
-  "vim-indent-object": { "branch": "master", "commit": "8ab36d5ec2a3a60468437a95e142ce994df598c6" },
-  "vim-loves-dafny": { "branch": "master", "commit": "d75d3b074a3da2b0fa9fd5bc980f52ec82c2ad7b" }
+  "vim-indent-object": { "branch": "master", "commit": "8ab36d5ec2a3a60468437a95e142ce994df598c6" }
 }
