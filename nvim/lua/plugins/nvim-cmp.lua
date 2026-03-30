@@ -13,8 +13,7 @@ return {
         ['<S-Tab>']   = cmp.mapping.select_prev_item(),
       }),
       sources = {
-        { name = 'nvim_lsp' },
-        { name = 'coc' },     -- add coc
+        { name = 'coc' },
         { name = 'buffer' },
         { name = 'path' },
       },
