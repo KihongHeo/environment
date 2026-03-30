@@ -1,4 +1,4 @@
-pcall(vim.treesitter.start, 0, "markdown")
+local vim = _G["vim"]
 
 vim.opt_local.colorcolumn = "120"
 
