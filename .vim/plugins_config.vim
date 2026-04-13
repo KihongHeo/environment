@@ -58,6 +58,12 @@ let g:neoformat_dafny_dafny = {
 
 let g:neoformat_enabled_dafny = ['dafny']
 
+let g:neoformat_plaintex_latexindent = {
+  \ 'exe': 'latexindent',
+  \ 'args': ['-l'],
+  \ 'stdin': 1
+  \ }
+
 let g:neoformat_tex_latexindent = {
   \ 'exe': 'latexindent',
   \ 'args': ['-l'],

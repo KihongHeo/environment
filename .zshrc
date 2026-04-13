@@ -163,3 +163,6 @@ if [ -f .env ]; then
 fi
 
 source <(fzf --zsh)
+
+# opencode
+export PATH=/Users/kihong/.opencode/bin:$PATH
