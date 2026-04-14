@@ -12,7 +12,14 @@ return {
   { "neoclide/coc.nvim", branch = "release" },
   { "neovim/nvim-lspconfig" },
   { "nvim-lua/plenary.nvim" },
-  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    opts = {
+      ensure_installed = { "html", "css", "markdown", "markdown_inline" },
+      highlight = { enable = true },
+    },
+  },
   { "nvim-tree/nvim-web-devicons" },
   { "HakonHarnes/img-clip.nvim" },
   { "zbirenbaum/copilot.lua" },
