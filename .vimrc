@@ -288,13 +288,6 @@ function! VisualSelection(direction, extra_filter) range
     let @" = l:saved_reg
 endfunction
 
-""""""""
-" After NeoVim 0.11, color is inverted for unknown reason. Here is a
-" workaround. (https://github.com/itchyny/lightline.vim/issues/695)
-""""""""
-highlight! link StatusLine Normal
-highlight! link StatusLineNC Normal
-
 
 " ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
 let s:opam_share_dir = system("opam var share")

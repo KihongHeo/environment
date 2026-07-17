@@ -1,0 +1,61 @@
+{
+  "plugins": {
+    "ale": {
+      "rev": "d0ea94323207abcdee717d76bb57b38d46055664",
+      "src": "https://github.com/dense-analysis/ale"
+    },
+    "cmp-buffer": {
+      "rev": "b74fab3656eea9de20a9b8116afa3cfc4ec09657",
+      "src": "https://github.com/hrsh7th/cmp-buffer"
+    },
+    "cmp-nvim-lsp": {
+      "rev": "cbc7b02bb99fae35cb42f514762b89b5126651ef",
+      "src": "https://github.com/hrsh7th/cmp-nvim-lsp"
+    },
+    "cmp-path": {
+      "rev": "c642487086dbd9a93160e1679a1327be111cbc25",
+      "src": "https://github.com/hrsh7th/cmp-path"
+    },
+    "coc.nvim": {
+      "rev": "d1689a4876305e5fc6691910c8ee6f1eb5da2219",
+      "src": "https://github.com/neoclide/coc.nvim",
+      "version": "'release'"
+    },
+    "copilot.vim": {
+      "rev": "a12fd5672110c8aa7e3c8419e28c96943ca179be",
+      "src": "https://github.com/github/copilot.vim"
+    },
+    "lean.nvim": {
+      "rev": "c2d274ed26192fbf43f222d24a8f0d08d1c617f9",
+      "src": "https://github.com/Julian/lean.nvim"
+    },
+    "lightline.vim": {
+      "rev": "d042c506cb2e7a59112a72447e0b5fe8739d9d1d",
+      "src": "https://github.com/itchyny/lightline.vim"
+    },
+    "neoformat": {
+      "rev": "9d95e5ca3ab263363758d5b1d7a174a30556ab2d",
+      "src": "https://github.com/sbdchd/neoformat"
+    },
+    "nerdcommenter": {
+      "rev": "a462bbda1e26f44fb3d3eb9d9d1c6a07aa98e665",
+      "src": "https://github.com/scrooloose/nerdcommenter"
+    },
+    "nvim-autopairs": {
+      "rev": "7b9923abad60b903ece7c52940e1321d39eccc79",
+      "src": "https://github.com/windwp/nvim-autopairs"
+    },
+    "nvim-cmp": {
+      "rev": "2ffe79f1f021def8dd1fcd81deb16f1bb0d989f3",
+      "src": "https://github.com/hrsh7th/nvim-cmp"
+    },
+    "nvim-lspconfig": {
+      "rev": "b386c50cd7816f8c8a2b13b298a218af1f5a75c6",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "vim-dafny": {
+      "rev": "be335a28d32a496fc8588714a8f0017225cc1aa9",
+      "src": "https://github.com/KihongHeo/vim-dafny"
+    }
+  }
+}
