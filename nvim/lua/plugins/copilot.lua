@@ -1,20 +1,25 @@
-vim.g.copilot_no_tab_map = true
+local map = vim.keymap.set
 
-vim.keymap.set("i", "<C-a>", 'copilot#Accept("\\<CR>")', {
+map("i", "<C-a>", 'copilot#Accept("\\<CR>")', {
   expr = true,
   silent = true,
   replace_keycodes = false,
   desc = "Copilot: accept suggestion",
 })
 
-vim.keymap.set("i", "<C-p>", "<Plug>(copilot-previous)", {
-  remap = true,
-  silent = true,
-  desc = "Copilot: previous suggestion",
-})
+local function cycle(method)
+  return function()
+    vim.fn[method]()
+  end
+end
 
-vim.keymap.set("i", "<C-n>", "<Plug>(copilot-next)", {
-  remap = true,
+-- These callbacks bypass completion-menu mappings owned by nvim-cmp.
+map("i", "<C-n>", cycle("copilot#Next"), {
   silent = true,
   desc = "Copilot: next suggestion",
+})
+
+map("i", "<C-p>", cycle("copilot#Previous"), {
+  silent = true,
+  desc = "Copilot: previous suggestion",
 })

@@ -3,7 +3,11 @@ require("plugins.lightline")
 require("plugins.neoformat")
 require("plugins.lean")
 require("plugins.ale")
-require("plugins.copilot")
+
+-- copilot.vim reads these globals while its plugin script is loading.
+-- Let nvim-cmp own Tab while keeping Copilot visible beside its completion menu.
+vim.g.copilot_no_tab_map = true
+vim.g.copilot_hide_during_completion = false
 
 vim.pack.add({
   { src = "https://github.com/neovim/nvim-lspconfig" },
@@ -18,11 +22,11 @@ vim.pack.add({
   { src = "https://github.com/sbdchd/neoformat" },
   { src = "https://github.com/windwp/nvim-autopairs" },
   { src = "https://github.com/dense-analysis/ale" },
-  { src = "https://github.com/neoclide/coc.nvim", version = "release" },
   { src = "https://github.com/scrooloose/nerdcommenter" },
 })
 
 -- Settings that import modules provided by the plugins above.
 require("plugins.autopairs")
 require("plugins.nvim-cmp")
-require("plugins.coc")
+-- Load Copilot keymaps after nvim-cmp so their key ownership is explicit.
+require("plugins.copilot")
