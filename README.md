@@ -20,8 +20,7 @@ cd environment
 
 ## Neovim
 
-1. Launch Neovim once — [lazy.nvim](https://github.com/folke/lazy.nvim) bootstraps automatically
-2. Run `:Lazy sync`
+Launch Neovim once to install plugins with Neovim's built-in package manager.
 
 ### Formatters (NeoFormat)
 
