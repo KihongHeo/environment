@@ -29,6 +29,16 @@ local function apply_highlights()
     SignColumn = { bg = "#202020" },
     StatusLine = { link = "Normal" },
     StatusLineNC = { link = "Normal" },
+
+    -- Lean infoview diff colors are independent of the editor's diff colors.
+    LeanInfoDiffDelete = { bg = "#ab5e5f" },
+    LeanInfoDiffChange = { bg = "#ab5e5f" },
+    leanInfoHypNameRemoved = { link = "LeanInfoDiffDelete" },
+    leanInfoGoalRemoved = { link = "LeanInfoDiffDelete" },
+    leanInfoDiffwillChange = { link = "LeanInfoDiffDelete" },
+    leanInfoDiffwasDeleted = { link = "LeanInfoDiffDelete" },
+    leanInfoDiffwillDelete = { link = "LeanInfoDiffDelete" },
+    widgetElementHighlight = { link = "LeanInfoDiffChange" },
   }
 
   for group, attributes in pairs(highlights) do
