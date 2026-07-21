@@ -35,6 +35,7 @@ local function apply_highlights()
     LeanInfoDiffChange = { bg = "#ab5e5f" },
     leanInfoHypNameRemoved = { link = "LeanInfoDiffDelete" },
     leanInfoGoalRemoved = { link = "LeanInfoDiffDelete" },
+    leanInfoDiffwasChanged = { link = "LeanInfoDiffChange" },
     leanInfoDiffwillChange = { link = "LeanInfoDiffDelete" },
     leanInfoDiffwasDeleted = { link = "LeanInfoDiffDelete" },
     leanInfoDiffwillDelete = { link = "LeanInfoDiffDelete" },
