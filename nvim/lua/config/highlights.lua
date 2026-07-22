@@ -23,6 +23,7 @@ local function apply_highlights()
     DiagnosticError = { fg = "#b0451c", ctermfg = "DarkRed" },
     Added = { fg = "#8edf3a", ctermfg = "Green" },
     Removed = { fg = "#e15140", ctermfg = "Red" },
+    SpellBad = { bg = "#ab5e5f", ctermbg = "DarkRed", undercurl = true, sp = "#ff6b6b" },
     Visual = { bg = "#3a3a3a" },
     CursorLine = { bg = "#2a2a2a" },
     CursorLineNr = { fg = "#ffd75f", bold = true },
