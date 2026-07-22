@@ -18,6 +18,8 @@ opt.fillchars = {
 }
 
 -- Files, backups, and undo
+opt.autoread = true
+opt.autowrite = true
 opt.swapfile = false
 opt.backup = false
 opt.writebackup = false
