@@ -27,7 +27,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 local external_changes_group = vim.api.nvim_create_augroup("config_external_changes", { clear = true })
 
 -- Reload files changed outside Neovim as soon as we return to them.
-vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "TermLeave" }, {
+vim.api.nvim_create_autocmd({ "FocusGained", "VimResume", "BufEnter", "TermLeave" }, {
   group = external_changes_group,
   pattern = "*",
   command = "checktime",
