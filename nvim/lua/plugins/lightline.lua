@@ -56,3 +56,20 @@ vim.g.lightline = {
 vim.g.unite_force_overwrite_statusline = 0
 vim.g.vimfiler_force_overwrite_statusline = 0
 vim.g.vimshell_force_overwrite_statusline = 0
+
+local netrw_lightline_group = vim.api.nvim_create_augroup("config_netrw_lightline", { clear = true })
+
+vim.api.nvim_create_autocmd("FileType", {
+  group = netrw_lightline_group,
+  pattern = "netrw",
+  callback = function()
+    -- When Neovim starts with a directory, netrw can replace 'statusline'
+    -- after lightline's BufEnter handler has already run.
+    vim.schedule(function()
+      if vim.fn.exists("*lightline#update") == 1 then
+        vim.fn["lightline#update"]()
+        vim.cmd.redrawstatus()
+      end
+    end)
+  end,
+})

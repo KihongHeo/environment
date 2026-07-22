@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "Coqtail": {
+      "rev": "ff4324a5c6dbfc5c7b47ffc66e0388d959442f0f",
+      "src": "https://github.com/whonore/Coqtail"
+    },
     "ale": {
       "rev": "d0ea94323207abcdee717d76bb57b38d46055664",
       "src": "https://github.com/dense-analysis/ale"
@@ -19,6 +23,10 @@
     "copilot.vim": {
       "rev": "a12fd5672110c8aa7e3c8419e28c96943ca179be",
       "src": "https://github.com/github/copilot.vim"
+    },
+    "coq-lsp.nvim": {
+      "rev": "37d1fadbc7bed67dd677c01aa594ccd24cbe92ce",
+      "src": "https://github.com/tomtomjhj/coq-lsp.nvim"
     },
     "lean.nvim": {
       "rev": "c2d274ed26192fbf43f222d24a8f0d08d1c617f9",

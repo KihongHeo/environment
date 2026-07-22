@@ -9,6 +9,10 @@ require("plugins.ale")
 vim.g.copilot_no_tab_map = true
 vim.g.copilot_hide_during_completion = false
 
+-- Coqtail supplies Coq file detection, syntax, and ftplugin support, while
+-- coq-lsp.nvim owns proof interaction through Neovim's LSP client.
+vim.g.loaded_coqtail = 1
+
 vim.pack.add({
   { src = "https://github.com/neovim/nvim-lspconfig" },
   { src = "https://github.com/KihongHeo/vim-dafny" },
@@ -23,6 +27,8 @@ vim.pack.add({
   { src = "https://github.com/windwp/nvim-autopairs" },
   { src = "https://github.com/dense-analysis/ale" },
   { src = "https://github.com/scrooloose/nerdcommenter" },
+  { src = "https://github.com/whonore/Coqtail" },
+  { src = "https://github.com/tomtomjhj/coq-lsp.nvim" },
 })
 
 -- Settings that import modules provided by the plugins above.
@@ -30,3 +36,4 @@ require("plugins.autopairs")
 require("plugins.nvim-cmp")
 -- Load Copilot keymaps after nvim-cmp so their key ownership is explicit.
 require("plugins.copilot")
+require("plugins.coq-lsp")
