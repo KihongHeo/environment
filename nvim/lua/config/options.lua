@@ -35,6 +35,7 @@ opt.ignorecase = true
 opt.smartcase = true
 opt.hlsearch = true
 opt.splitbelow = true
+opt.winheight = 5
 
 -- Colors
 opt.termguicolors = true
