@@ -33,19 +33,5 @@ vim.api.nvim_create_autocmd({ "FocusGained", "VimResume", "BufEnter", "TermLeave
   command = "checktime",
 })
 
-local spell_defaults_group = vim.api.nvim_create_augroup("config_spell_defaults", { clear = true })
-local spell_filetypes = {
-  gitcommit = true,
-  latex = true,
-  markdown = true,
-  plaintex = true,
-  tex = true,
-}
-
-vim.api.nvim_create_autocmd("FileType", {
-  group = spell_defaults_group,
-  pattern = "*",
-  callback = function()
-    vim.opt_local.spell = spell_filetypes[vim.bo.filetype] or false
-  end,
-})
+-- Spell checking is opt-in; do not enable it automatically by file type.
+vim.opt.spell = false

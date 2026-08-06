@@ -158,8 +158,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-if [ -f .env ]; then
-  source .env
+if [ -f $HOME/.env ]; then
+  source $HOME/.env
 fi
 
 source <(fzf --zsh)
