@@ -92,6 +92,17 @@ if [ $(uname) = 'Linux' ]; then
     alias ls='ls --color=auto'
   fi
 
+  # pbcopy function for linux + tmux
+  pbcopy() {
+    local encoded
+    encoded=$(base64 | tr -d '\n') || return 1
+    if [[ -n ${TMUX:-} ]]; then
+      printf '\033Ptmux;\033\033]52;c;%s\007\033\\' "$encoded"
+    else
+      printf '\033]52;c;%s\007' "$encoded"
+    fi
+  }
+
   #  export LD_LIBRARY_PATH=".:$HOME/.local/bin:$HOME/usr/lib:/usr/local/lib:/usr/lib:/usr/local/lib64:/usr/lib64:/home/khheo/.linuxbrew/lib:/usr/lib/x86_64-linux-gnu/"
   export LD_LIBRARY_PATH=".:$HOME/.local/bin:$HOME/usr/lib:/usr/local/lib:/usr/lib:/usr/local/lib64:/usr/lib64:/home/khheo/.linuxbrew/lib"
   export CLASSPATH='.:/usr/lib/jvm/java-6-sun/lib/:/home/khheo/javalib/jdom/build/jdom.jar'
