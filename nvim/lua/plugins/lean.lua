@@ -10,6 +10,27 @@ vim.g.lean_config = {
   },
 }
 
+local abbreviations_group = vim.api.nvim_create_augroup("config_lean_abbreviations", { clear = true })
+
+vim.api.nvim_create_autocmd("FileType", {
+  group = abbreviations_group,
+  pattern = "*",
+  callback = function(event)
+    local filetype = vim.bo[event.buf].filetype
+    if filetype == "lean" or filetype == "leaninfo" or filetype == "tex" or filetype == "plaintex" then
+      return
+    end
+
+    require("lean.abbreviations").init(event.buf)
+    vim.keymap.set(
+      "n",
+      "<localleader>\\",
+      "<Cmd>LeanAbbreviationsReverseLookup<CR>",
+      { buffer = event.buf, desc = "Show Unicode abbreviation" }
+    )
+  end,
+})
+
 local infoview_mouse_group = vim.api.nvim_create_augroup("config_lean_infoview_mouse", { clear = true })
 
 vim.api.nvim_create_autocmd("FileType", {
