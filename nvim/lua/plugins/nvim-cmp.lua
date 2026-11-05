@@ -22,3 +22,13 @@ cmp.setup({
     { name = "path" },
   }),
 })
+
+-- VimTeX supplies LaTeX completions; retain the shared Tab/Enter mappings.
+cmp.setup.filetype({ "tex", "plaintex" }, {
+  sources = cmp.config.sources({
+    { name = "vimtex" },
+  }, {
+    { name = "buffer" },
+    { name = "path" },
+  }),
+})

@@ -19,11 +19,6 @@ vim.lsp.config("ocamllsp", {
   end,
 })
 
--- Complete LaTeX references and citations through the existing nvim-cmp UI.
-vim.lsp.config("texlab", {
-  capabilities = capabilities,
-})
-
-vim.lsp.enable({ "dafny", "ocamllsp", "texlab" })
+vim.lsp.enable({ "dafny", "ocamllsp" })
 
 require("config.harper")

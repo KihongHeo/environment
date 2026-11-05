@@ -1,3 +1,3 @@
 #!/bin/bash
 
-brew install texlab codex fzf harper
+brew install codex fzf harper

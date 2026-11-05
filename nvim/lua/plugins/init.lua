@@ -15,6 +15,8 @@ vim.g.loaded_coqtail = 1
 
 vim.pack.add({
   { src = "https://github.com/neovim/nvim-lspconfig" },
+  { src = "https://github.com/lervag/vimtex" },
+  { src = "https://github.com/micangl/cmp-vimtex" },
   { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
   { src = "https://github.com/KihongHeo/vim-dafny" },
   { src = "https://github.com/github/copilot.vim" },
