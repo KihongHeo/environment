@@ -20,3 +20,5 @@ vim.lsp.config("ocamllsp", {
 })
 
 vim.lsp.enable({ "dafny", "ocamllsp" })
+
+require("config.harper")
