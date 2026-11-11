@@ -1,6 +1,11 @@
 local cmp = require("cmp")
 
 cmp.setup({
+  -- Select a candidate explicitly with Tab before Enter can confirm it.
+  preselect = cmp.PreselectMode.None,
+  completion = {
+    completeopt = "menu,menuone,noinsert,noselect",
+  },
   window = {
     completion = {
       side_padding = 0,
@@ -11,7 +16,7 @@ cmp.setup({
     -- Reserve Ctrl-n/Ctrl-p for Copilot; cmp navigation uses Tab instead.
     ["<C-n>"] = cmp.config.disable,
     ["<C-p>"] = cmp.config.disable,
-    ["<CR>"] = cmp.mapping.confirm({ select = true }),
+    ["<CR>"] = cmp.mapping.confirm({ select = false }),
     ["<Tab>"] = cmp.mapping.select_next_item(),
     ["<S-Tab>"] = cmp.mapping.select_prev_item(),
   }),
