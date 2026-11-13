@@ -175,5 +175,4 @@ fi
 
 source <(fzf --zsh)
 
-# opencode
-export PATH=/Users/kihong/.opencode/bin:$PATH
+export KVPN_USER=namriv05
