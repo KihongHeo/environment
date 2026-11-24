@@ -6,7 +6,13 @@ local function configure_client(client)
   end
 end
 
+local filetypes = vim.deepcopy(vim.lsp.config.harper_ls.filetypes)
+if not vim.tbl_contains(filetypes, "text") then
+  table.insert(filetypes, "text")
+end
+
 vim.lsp.config("harper_ls", {
+  filetypes = filetypes,
   on_attach = configure_client,
 })
 
