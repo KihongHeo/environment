@@ -22,6 +22,12 @@ cd environment
 
 Launch Neovim once to install plugins with Neovim's built-in package manager.
 
+### Harper user dictionary
+
+Harper stores words added to the user dictionary in `nvim/harper-dict.txt`
+through the Neovim config symlink created by `setup.sh`. Commit and push changes
+to that file, then pull on your other computers to share new words.
+
 ### Formatters (NeoFormat)
 
 | Language | Tool |

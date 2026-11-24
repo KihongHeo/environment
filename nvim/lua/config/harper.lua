@@ -14,6 +14,11 @@ end
 vim.lsp.config("harper_ls", {
   filetypes = filetypes,
   on_attach = configure_client,
+  settings = {
+    ["harper-ls"] = {
+      userDictPath = vim.fn.stdpath("config") .. "/harper-dict.txt",
+    },
+  },
 })
 
 -- Also apply this when sourcing the file in an existing Neovim session.
