@@ -1,3 +1,3 @@
 #!/bin/bash
 
-brew install codex fzf harper tree-sitter-cli
+brew install codex fzf harper tree-sitter-cli pyenv rbenv opam
