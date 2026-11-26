@@ -16,13 +16,15 @@ vim.lsp.config("harper_ls", {
   on_attach = configure_client,
   settings = {
     ["harper-ls"] = {
-      userDictPath = vim.fn.stdpath("config") .. "/harper-dict.txt",
+      userDictPath = vim.fn.expand("~/Dropbox/harper/harper-dict.txt"),
     },
   },
 })
 
 -- Also apply this when sourcing the file in an existing Neovim session.
 for _, client in ipairs(vim.lsp.get_clients({ name = "harper_ls" })) do
+  client.config.settings = vim.lsp.config.harper_ls.settings
+  client:notify("workspace/didChangeConfiguration", { settings = client.config.settings })
   configure_client(client)
 end
 
